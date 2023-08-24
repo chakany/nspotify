@@ -7,7 +7,7 @@ await ndk.connect(1000)
 
 setInterval(async () => {
     try {
-        const req = await fetch(`http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user=${process.env.lastfmuser}&api_key=${process.env.lastfmapikey}&format=json`)
+        const req = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user=${process.env.lastfmuser}&api_key=${process.env.lastfmapikey}&format=json`)
         const res = await req.json();
         const mostRecent = res.recenttracks.track[0]
         const songEv = new NDKEvent(ndk)
