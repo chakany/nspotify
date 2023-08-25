@@ -18,10 +18,8 @@ setInterval(async () => {
             ['d', 'music'],
             ['expiration', `${expiration}`]
         ]
-        if (mostRecent['@attr'].nowplaying !== 'true') {
+        if (mostRecent['@attr'] && mostRecent['@attr'].nowplaying !== 'true') {
             console.log('not playing')
-            songEv.content = "";
-            await songEv.publish()
             return
         }
         console.log(`playing ${mostRecent.name} - ${mostRecent.artist['#text']}`)
