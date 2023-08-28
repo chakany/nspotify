@@ -6,9 +6,9 @@ despite the name, this actually uses last.fm for recieving song data
 3. create a .env file in the root directory
 4. add the following to the .env file:
 ```
-privkey=
-lastfmapikey=
-lastfmuser=
+NOSTR_PRIVKEY=
+LASTFM_USER=
+LASTFM_APIKEY=
 ```
 5. run `pnpm install`
 6. run `pnpm start`
